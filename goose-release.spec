@@ -9,15 +9,18 @@
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.42.gl6
+Release:        6.0.0.43.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
 URL:            http://github.com/gooseproject/goose-release
-Obsoletes:      rawhide-release redhat-release-as redhat-release-es redhat-release-ws redhat-release-de comps rpmdb-redhat fedora-release redhat-release-server
-Provides:       goose-release-server redhat-release system-release
 Source0:        goose-release-6.tar.gz
 BuildArch:	    noarch
+
+Obsoletes:      rawhide-release redhat-release-as redhat-release-es 
+Obsoletes:      redhat-release-ws redhat-release-de comps rpmdb-redhat 
+Obsoletes:      fedora-release redhat-release-server goose-release-server 
+Provides:       redhat-release system-release goose-release-server
 
 %description
 %{product_family} release files
@@ -64,14 +67,26 @@ install -d -m 755 $RPM_BUILD_ROOT/etc/rpm
 cat >> $RPM_BUILD_ROOT/etc/rpm/macros.dist << EOF
 # dist macros.
 
-%%goose %{base_release_version}
 %%rhel %{base_release_version}
+%%goose %{base_release_version}
 %%dist .gl%{base_release_version}
 %%gl%{base_release_version} 1
 EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%triggerin -- firstboot
+if [ -f /usr/share/firstboot/modules/additional_cds.py ] ; then
+  rm -f /usr/share/firstboot/modules/additional_cds.py*
+fi
+if [ -f /usr/share/firstboot/modules/eula.py ] ; then
+  rm -f /usr/share/firstboot/modules/eula.py*
+fi
+%triggerin -- rhn-setup-gnome
+if [ -f /usr/share/firstboot/modules/rhn_register.py ] ; then
+  rm -f /usr/share/firstboot/modules/rhn_register.py*
+fi
 
 %files
 %defattr(-,root,root)
@@ -88,7 +103,11 @@ rm -rf $RPM_BUILD_ROOT
 /etc/rpm/macros.dist
 
 %changelog
-* Tue Mar 27 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.41
+* Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.43
+- Removed RHEL specific firstboot components
+- Obsoleted goose-release-server
+
+* Tue Mar 27 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.42
 - Changed to goose-release from goose-release-server
 - Added goose.repo and an temporary empty RPM-GPG-KEY-goose
 
