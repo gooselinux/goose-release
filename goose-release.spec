@@ -1,7 +1,5 @@
 %define debug_package %{nil}
 %define product_family GoOSe Linux
-%define variant_titlecase Server
-%define variant_lowercase server
 %define release_name Pilgrim
 %define base_release_version 6
 %define full_release_version 6.0
