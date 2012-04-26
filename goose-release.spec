@@ -3,11 +3,11 @@
 %define release_name Pilgrim
 %define base_release_version 6
 %define full_release_version 6.0
-%define beta Alpha
+%define beta Beta
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.43.gl6
+Release:        6.0.0.44.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -101,6 +101,9 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
+* Wed Apr 25 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.44
+- Updated to beta, changed goose.repo to match proper repository url
+
 * Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.43
 - Removed RHEL specific firstboot components
 - Obsoleted goose-release-server

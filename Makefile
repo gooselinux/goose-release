@@ -1,6 +1,6 @@
 # This makefile is downloading any file found in 
 # the 'sources' file already existing in this directory
-# and validating the sha256sum of the archive against it..
+# and validating the sha256sum of the archive against it.
 NAME := goose-release
 
 define find-common-dir
