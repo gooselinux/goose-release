@@ -7,7 +7,7 @@
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.45.gl6
+Release:        6.0.0.46.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -101,6 +101,9 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
+* Sun May 6 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.46
+- Updated goose.repo to use beta key
+
 * Mon Apr 30 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.45
 - Added gpg keys to the tarball, enabled gpg checking in repo config
 
