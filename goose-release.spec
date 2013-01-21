@@ -3,7 +3,7 @@
 %define release_name Pilgrim
 %define base_release_version 6
 %define full_release_version 6.0
-%define beta Beta
+%define beta
 
 Name:           goose-release
 Version:        6
