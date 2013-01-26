@@ -7,7 +7,7 @@
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.48.gl6
+Release:        6.0.0.49.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -101,8 +101,11 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
+* Sat Jan 26 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.49
+- Replace RPM-GPG-KEY with correct one
+
 * Wed Jan 23 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.48
-- Removed alpha reference from goose.repo
+- Update to new RPM-GPG-KEY
 
 * Thu May 17 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.47
 - Removed alpha reference from goose.repo
