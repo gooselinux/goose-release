@@ -3,17 +3,17 @@
 %define release_name Pilgrim
 %define base_release_version 6
 %define full_release_version 6.0
-%define beta Beta
+#define beta Beta
 
 Name:           goose-release
-Version:        6
-Release:        6.0.0.47.gl6
+Version:        6.0
+Release:        6.0.1.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
 URL:            http://github.com/gooseproject/goose-release
 Source0:        goose-release-6.tar.gz
-BuildArch:	    noarch
+BuildArch:      noarch
 
 Obsoletes:      rawhide-release redhat-release-as redhat-release-es 
 Obsoletes:      redhat-release-ws redhat-release-de comps rpmdb-redhat 
@@ -67,7 +67,7 @@ cat >> $RPM_BUILD_ROOT/etc/rpm/macros.dist << EOF
 
 %%rhel %{base_release_version}
 %%goose %{base_release_version}
-%%dist .gl%{base_release_version}
+%%dist .gl%{full_release_version}
 %%gl%{base_release_version} 1
 EOF
 
@@ -101,151 +101,39 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
-* Thu May 17 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.47
+* Wed Mar 27 2013 Clint Savage <herlo@gooseproject.org> - 6.0-6.0.1.gl6
+- Following the SL model and removed the extra version cruft
+- 6.0 is the version, 6.0.1 is the first version of 6.0-updates
+
+* Thu May 17 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.47.gl6
 - Removed alpha reference from goose.repo
 
-* Sun May 6 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.46
+* Sun May 6 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.46.gl6
 - Updated goose.repo to use beta key
 
-* Mon Apr 30 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.45
+* Mon Apr 30 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.45.gl6
 - Added gpg keys to the tarball, enabled gpg checking in repo config
 
-* Wed Apr 25 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.44
+* Wed Apr 25 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.44.gl6
 - Updated to beta, changed goose.repo to match proper repository url
 
-* Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.43
+* Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.43.gl6
 - Removed RHEL specific firstboot components
 - Obsoleted goose-release-server
 
-* Tue Mar 27 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.42
+* Tue Mar 27 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.42.gl6
 - Changed to goose-release from goose-release-server
 - Added goose.repo and an temporary empty RPM-GPG-KEY-goose
 
-* Sat Jul 10 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.41
+* Sat Jul 10 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.41.gl6
 - Added %%rhel tag to macros.dist
 
-* Thu Jun 9 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.40
+* Thu Jun 9 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.40.gl6
 - Change dist from el6 to gl6
 
-* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.39
+* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.39.gl6
 - Rebuild for GoOSe Linux 6.0 #2
 
-* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.38
+* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.38.gl6
 - Rebuild for GoOSe Linux 6.0
 
-* Fri Sep  3 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.37
-- Update EULA
-- Resolves: rhbz#591512
-
-* Tue Aug 31 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.36
-- Remove beta text
-- Update EULA
-- Resolves: rhbz#622251, rhbz#591512
-
-* Mon Aug 16 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.35
-- Bump for GA
-- Resolves: rhbz#622251
-
-* Mon Jul 26 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.91-6.0.0.34
-- Update yum repos for GA
-
-* Tue Jun 29 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.91-6.0.0.33
-- Update GPL to match standard text
-
-* Tue Jun 29 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.91-6.0.0.32
-- Bump version for post-Beta2
-
-* Wed Jun 16 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.90-6.0.0.32
-- Fix logic for AddOn repos
-
-* Tue Jun 15 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.90-6.0.0.31
-- Only include the AddOn repos in the appropriate arches/variants
-- Update the Beta GPG key locations
-
-* Tue Jun  8 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.90-6.0.0.29
-- Combine GPG keys
-
-* Fri May 28 2010 Dennis Gregorovic <dgregor@redhat.com> - 5.90-6.0.0.28
-- Use a different version value so as to not conflict with GA
-
-* Fri May 28 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.28
-- Include the variant in the version field (needed for RHN)
-- Update repos for Beta 2
-
-* Mon Apr 26 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.27
-- Make 'Beta' lowercase in the cpe
-- Provide system-release
-
-* Wed Mar 31 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.25
-- Temporarily disable beta repos
-
-* Mon Mar 29 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.24
-- Add beta debuginfo repos
-
-* Mon Mar 29 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.23
-- Enable yum repo for Beta
-
-* Wed Mar 10 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.21
-- Update yum repos for Beta 1
-
-* Fri Feb  5 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.20
-- Use the %%{?dist} macro
-
-* Wed Feb  3 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.19
-- Mark the yum repos as configuration files
-
-* Tue Feb  2 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.18
-- Use %setup -q to keeep rpmlint happy
-
-* Thu Jan 28 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.17
-- Bump for Beta
-
-* Tue Nov 17 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.16
-- Fix newline issue in RPM-GPG-KEY-redhat-beta-2
-- spec file cleanup
-
-* Thu Oct  22 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.15
-- Spec cleanup (dmach@redhat.com)
-- Add the beta-2 and release-2 keys
-- Rename the older keys
-- Comment out eula.py code until it gets cleaned up
-
-* Mon Sep 21 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.14
-- Fix typo in cpe name
-
-* Fri Sep 18 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.13
-- Fix the cpe name
-
-* Thu Sep 17 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.12
-- Update the release name
-
-* Thu Sep 17 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.11
-- Add system-release-cpe
-
-* Tue Sep 15 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.10
-- Add the 'el6' macro
-
-* Tue Sep  1 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.9
-- Bump for rebuild
-
-* Tue Aug 11 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.8
-- Indicate Alpha instead of Beta
-
-* Wed Jun 24 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.7
-- Updated eula.py
-
-* Tue Jun 23 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.6
-- Add eula.py back
-
-* Mon Jun 15 2009 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.5
-- add /etc/system-release
-- some minor cleanup
-
-* Fri Jun  5 2009 Dennis Gregorovic <dgregor@redhat.com> - 6Server-6.0.0.4
-- bump for rebuild
-
-* Fri Jun  5 2009 Dennis Gregorovic <dgregor@redhat.com> - 6Server-6.0.0.3
-- Drop firstboot files as they conflict with the firstboot package
-
-* Wed Jun  3 2009 Mike McLean <mikem@redhat.com> - 6Server-6.0.0.1
-- initial build for version 6
