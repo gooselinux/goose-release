@@ -96,6 +96,7 @@ fi
 %config(noreplace) %attr(0644,root,root) /etc/issue
 %config(noreplace) %attr(0644,root,root) /etc/issue.net
 %config(noreplace) %attr(0644,root,root) /etc/yum.repos.d/goose.repo
+%config(noreplace) %attr(0644,root,root) /etc/yum.repos.d/goose-updates.repo
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
 /etc/rpm/macros.dist
