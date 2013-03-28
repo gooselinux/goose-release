@@ -12,7 +12,7 @@ Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
 URL:            http://github.com/gooseproject/goose-release
-Source0:        goose-release-6.tar.gz
+Source0:        goose-release-6.0.tar.gz
 BuildArch:      noarch
 
 Obsoletes:      rawhide-release redhat-release-as redhat-release-es 
