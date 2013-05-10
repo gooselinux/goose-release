@@ -2,12 +2,12 @@
 %define product_family GoOSe Linux
 %define release_name Pilgrim
 %define base_release_version 6
-%define full_release_version 6.0
+%define full_release_version 6.1
 %define beta
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.49.gl6
+Release:        6.1.0.0.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
