@@ -7,7 +7,7 @@
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.49.gl6
+Release:        6.0.0.50.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -101,42 +101,45 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
-* Wed Mar 27 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.49.gl6
+* Wed Mar 27 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.50.gl6
 - Adding the updates repo
 
+* Sat Jan 26 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.49.gl6
+- Replace RPM-GPG-KEY with correct one
+
 * Wed Jan 23 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.48.gl6
-- Removed alpha reference from goose.repo
+- Update to new RPM-GPG-KEY
 
 * Thu May 17 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.47.gl6
 - Removed alpha reference from goose.repo
 
-* Sun May 6 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.46
+* Sun May 6 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.46.gl6
 - Updated goose.repo to use beta key
 
-* Mon Apr 30 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.45
+* Mon Apr 30 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.45.gl6
 - Added gpg keys to the tarball, enabled gpg checking in repo config
 
-* Wed Apr 25 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.44
+* Wed Apr 25 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.44.gl6
 - Updated to beta, changed goose.repo to match proper repository url
 
-* Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.43
+* Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.43.gl6
 - Removed RHEL specific firstboot components
 - Obsoleted goose-release-server
 
-* Tue Mar 27 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.42
+* Tue Mar 27 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.42.gl6
 - Changed to goose-release from goose-release-server
 - Added goose.repo and an temporary empty RPM-GPG-KEY-goose
 
-* Sat Jul 10 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.41
+* Sat Jul 10 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.41.gl6
 - Added %%rhel tag to macros.dist
 
-* Thu Jun 9 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.40
+* Thu Jun 9 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.40.gl6
 - Change dist from el6 to gl6
 
-* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.39
+* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.39.gl6
 - Rebuild for GoOSe Linux 6.0 #2
 
-* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.38
+* Mon Jun 6 2011 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.38.gl6
 - Rebuild for GoOSe Linux 6.0
 
 * Fri Sep  3 2010 Dennis Gregorovic <dgregor@redhat.com> - 6-6.0.0.37
