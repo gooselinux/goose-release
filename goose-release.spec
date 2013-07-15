@@ -7,7 +7,7 @@
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.48.gl6
+Release:        6.0.0.49.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -15,9 +15,9 @@ URL:            http://github.com/gooseproject/goose-release
 Source0:        goose-release-6.0.tar.gz
 BuildArch:      noarch
 
-Obsoletes:      rawhide-release redhat-release-as redhat-release-es 
-Obsoletes:      redhat-release-ws redhat-release-de comps rpmdb-redhat 
-Obsoletes:      fedora-release redhat-release-server goose-release-server 
+Obsoletes:      rawhide-release redhat-release-as redhat-release-es
+Obsoletes:      redhat-release-ws redhat-release-de comps rpmdb-redhat
+Obsoletes:      fedora-release redhat-release-server goose-release-server
 Provides:       redhat-release system-release goose-release-server
 
 %description
@@ -101,8 +101,11 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
-* Wed Mar 27 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.48.gl6
+* Wed Mar 27 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.49.gl6
 - Adding the updates repo
+
+* Wed Jan 23 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.48.gl6
+- Removed alpha reference from goose.repo
 
 * Thu May 17 2012 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.47.gl6
 - Removed alpha reference from goose.repo
