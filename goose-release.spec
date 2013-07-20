@@ -7,7 +7,7 @@
 
 Name:           goose-release
 Version:        6
-Release:        6.0.0.50.gl6
+Release:        6.0.0.51.gl6
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -101,6 +101,9 @@ fi
 /etc/rpm/macros.dist
 
 %changelog
+* Fri Jul 19 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.51.gl6
+- Fix updates repo to use a single word instead of two
+
 * Wed Mar 27 2013 Clint Savage <herlo@gooseproject.org> - 6-6.0.0.50.gl6
 - Adding the updates repo
 
